@@ -7,12 +7,12 @@ namespace Twilio.Conversations
 	static class CFunctions
 	{
 		// CGAffineTransform TWCVideoOrientationMakeTransform (TWCVideoOrientation orientation);
-		[DllImport("__Internal")]
-		static extern CoreGraphics.CGAffineTransform VideoOrientationMakeTransform(VideoOrientation orientation);
+		//[DllImport("__Internal")]
+		//static extern CoreGraphics.CGAffineTransform VideoOrientationMakeTransform(VideoOrientation orientation);
 
 		// BOOL TWCVideoOrientationIsRotated (TWCVideoOrientation orientation);
-		[DllImport("__Internal")]
-		static extern bool TWCVideoOrientationIsRotated(VideoOrientation orientation);
+		//[DllImport("__Internal")]
+		//static extern bool TWCVideoOrientationIsRotated(VideoOrientation orientation);
 	}
 
 	[Native]
