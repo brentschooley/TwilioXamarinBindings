@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using CoreFoundation;
+using CoreMedia;
+using Foundation;
 using ObjCRuntime;
+using UIKit;
+using CoreGraphics;
 
 namespace Twilio.Conversations
 {
@@ -8,11 +13,13 @@ namespace Twilio.Conversations
 	{
 		// CGAffineTransform TWCVideoOrientationMakeTransform (TWCVideoOrientation orientation);
 		//[DllImport("__Internal")]
-		//static extern CoreGraphics.CGAffineTransform VideoOrientationMakeTransform(VideoOrientation orientation);
+		[Export("VideoOrientationMakeTransform")]
+		static extern CGAffineTransform VideoOrientationMakeTransform(VideoOrientation orientation);
 
 		// BOOL TWCVideoOrientationIsRotated (TWCVideoOrientation orientation);
 		//[DllImport("__Internal")]
-		//static extern bool TWCVideoOrientationIsRotated(VideoOrientation orientation);
+		[Export("TWCVideoOrientationIsRotated")]
+		static extern bool TWCVideoOrientationIsRotated(VideoOrientation orientation);
 	}
 
 	[Native]
